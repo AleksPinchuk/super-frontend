@@ -33,9 +33,9 @@ console.log(request.method, request.url);
 response.end();
 });
 
-const port = process.env.PORT;
+let port = process.env.PORT;
 
-server.listen(3000 ||process.env.PORT || 3000);
+server.listen(process.env.PORT || 3000);
 console.log('Server started!');
 
 
