@@ -1,19 +1,43 @@
 
+//const http = require('http');
+//const fs = require('fs');
+//const { hostname } = require('os');
+//const server = http.createServer(function(request, response){
+//   console.log(request.method, request.url);
+//   if (request.url === '/style.css'){
+//      const css = fs.readFileSync('style.css', 'utf8');
+//      response.end(css);
+//  } else {
+//      const html = fs.readFileSync('index.html', 'utf8');
+//      response.end(html);
+//  }
+//});
+//const port = process.env.PORT || 5000;
+//console.log(process.env.PORT);
+//server.listen(port, { hostname: hostname }, () => {
+//    console.log('Server started!');
+//});
+
 const http = require('http');
 const fs = require('fs');
-const { hostname } = require('os');
+
 const server = http.createServer(function(request, response){
-    console.log(request.method, request.url);
-    if (request.url === '/style.css'){
-        const css = fs.readFileSync('style.css', 'utf8');
-        response.end(css);
-    } else {
-        const html = fs.readFileSync('index.html', 'utf8');
-        response.end(html);
-    }
+console.log(request.method, request.url);
+   if (request.url === '/style.css'){
+      const css = fs.readFileSync('style.css', 'utf8');
+      response.end(css);
+  } else {
+      const html = fs.readFileSync('index.html', 'utf8');
+      response.end(html);
+};
+response.end();
 });
-const port = process.env.PORT || 5000;
-console.log(process.env.PORT);
-server.listen(port, { hostname: hostname }, () => {
-    console.log('Server started!');
-});
+
+const port = process.env.PORT;
+
+server.listen(3000 ||process.env.PORT || 3000);
+console.log('Server started!');
+
+
+
+
