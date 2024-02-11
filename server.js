@@ -10,7 +10,6 @@ console.log(request.method, request.url);
       const html = fs.readFileSync('index.html', 'utf8');
       response.end(html);
 };
-response.end();
 });
 
 let port = process.env.PORT;
