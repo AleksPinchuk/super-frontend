@@ -8,11 +8,11 @@ const server = http.createServer(function (request, response) {
     if (request.url === '/style.css') {
         const css = fs.readFileSync('style.css', 'utf8');
         response.end(css);
-        console.log('css = ', css)
+       
     } else {
         const html = fs.readFileSync('index.html', 'utf8');
         response.end(html);
-        console.log('html = ', html)
+    
     };
 });
 
