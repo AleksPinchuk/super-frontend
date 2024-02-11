@@ -12,7 +12,7 @@ console.log(request.method, request.url);
 };
 });
 
-let port = process.env.PORT;
+console.log('port = ', process.env.PORT);
 
 server.listen(process.env.PORT || 3000);
 console.log('Server started!');
